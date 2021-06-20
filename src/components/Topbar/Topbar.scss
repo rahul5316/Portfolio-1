@@ -1,0 +1,96 @@
+@import "../../global.scss";
+
+.topbar{
+    background-color: $primary-color;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    color: $secondary-color;
+    width: 100%;
+    z-index: 2;
+    transition: all 1s;
+
+    .wrapper{
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left{
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            
+            
+            .logo{
+                color: #990100;
+                font-size: 40px;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .itemcontainer{
+                display: flex;
+                align-items: center;
+
+                >*{
+                    margin-left: 5px;
+                }
+
+                .icon{
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .right{
+            .hamburger{
+                scrollbar-width: none;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                overflow: hidden;
+
+                height: 25px;
+                width: 28px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                cursor: pointer;
+
+                span{
+                    background-color: $secondary-color;
+                    width: 100%;
+                    height: 3px;
+                    transform-origin: left;
+                    transition: all 1s;
+                }
+            }
+        }
+    }
+
+    &.active{
+        background-color: $secondary-color;
+        color: $primary-color;
+        
+        .wrapper .left .logo{
+            color: #F77F00;
+        }
+
+        .right .hamburger{
+            span{
+                background-color: $primary-color;
+                width: 32px;
+                &:first-child{
+                    transform: rotate(44deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                    transform: rotate(-44deg);
+                }
+            }
+        } 
+    }
+}
