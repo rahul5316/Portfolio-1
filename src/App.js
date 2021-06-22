@@ -3,6 +3,7 @@ import Contact from "./components/Contact/Contact";
 import Intro from "./components/Intro/Intro";
 import Projects from "./components/Projects/Projects";
 import Menu from "./components/Menu/Menu";
+import Education from "./components/Education/Education";
 
 import "./app.scss";
 import { useState } from "react";
@@ -17,6 +18,7 @@ function App() {
       <div className="sections">
         <Intro/>
         <Projects/>
+        <Education/>
         <Contact/>
       </div>
     </div>
