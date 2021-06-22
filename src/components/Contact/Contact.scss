@@ -1,21 +1,179 @@
 .contact{
-    background-size: 400%;
-    background: #f09433; 
-    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 ); 
-    animation: bganimation 5s infinite;
+    background:rgb(46, 46, 46);
+    // color: rgb(86, 219, 236);
+    .top{
+        display: flex;
+        align-content: right;
+        justify-content: flex-end;
+        
+        .contact_text{
+            color: white;
+            display: flex;
+            flex: 6;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            margin: 100px;
+
+            .heading{
+                font-size: 80px;
+            }
+            h1{
+                margin: 10px;
+                padding: 10px;
+                font-size: 38px;
+                color: white;
+            } 
+            h2{
+                margin: 10px;
+                padding: 10px;
+                font-size: 30px;
+                color: white;
+
+                span{
+                    font-size: 55px;
+                    color: transparent;
+
+                    background: #f09433; 
+                    background: -moz-linear-gradient(45deg, #f09433 0%, #CC2366 25%, #BC1888 50%, #384BDD 75%, #00D0FF 100%); 
+                    background: -webkit-linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
+                    background: linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#00D0FF',GradientType=1 ); 
+                    background-size: 300%;
+                    animation: bganimation 15s infinite;
+
+                    background-clip: text;
     
-    @keyframes bganimation {
-        0%{
-          background-position: 0% 50%;
+                    @keyframes bganimation {
+                        0%{
+                        background-position: 0% 50%;
+                        }
+                        50%{
+                        background-position: 100% 50%;
+                        }
+                        100%{
+                        background-position: 0% 50%;
+                        }
+                    }
+                }
+            }
         }
-        50%{
-          background-position: 100% 50%;
+
+
+        .arrow{
+            flex: 3;
+            width: 100%;
+            padding-right: 50px;
+            height: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-top: 15vw;
         }
-        100%{
-          background-position: 0% 50%;
+
+        .logocontainer{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: space-between;
+            justify-items: center;
+            margin: 100px 60px 0 0 ;
+            
+
+            >*{
+                cursor: pointer;
+                margin-right: 40px;
+                transition: all 0.35s ease;
+                @keyframes bganimation {
+                    0%{
+                    background-position: 0% 50%;
+                    }
+                    50%{
+                    background-position: 100% 50%;
+                    }
+                    100%{
+                    background-position: 0% 50%;
+                    }
+                }
+                &:hover{
+                    box-shadow: 2px 4px 0px 1px rgba(255, 255, 255, 0.979);
+                }
+            }
+
+            .instalogocontainer{
+                height: 88px;
+                width: 88px;
+                border: solid 2px white;
+                border-radius: 27px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                margin-bottom: 20px;
+                background: #f09433; 
+                background: -moz-linear-gradient(45deg, #f09433 0%, #CC2366 25%, #BC1888 50%, #384BDD 75%, #00D0FF 100%); 
+                background: -webkit-linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
+                background: linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#00D0FF',GradientType=1 ); 
+                background-size: 300%;
+                animation: bganimation 15s infinite;
+
+                .insta-logo{
+                    color: white;
+                    font-size: 100px;
+                }
+            }
+
+            .linkdinlogocontainer{
+                height: 80px;
+                width: 80px;
+                border: solid 2px white;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 5px;
+                overflow: hidden;
+
+                background: #f09433; 
+                background: -moz-linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
+                background: -webkit-linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
+                background: linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b4d8', endColorstr='#03045e',GradientType=1 ); 
+                background-size: 300%;
+                animation: bganimation 15s infinite;
+
+                .linkdin-logo{
+                    color: white;
+                    font-size: 100px;
+                }
+            }
+
+            .githublogocontainer{
+                height: 90px;
+                width: 90px;
+                border: solid 2px white;
+                border-radius: 46px 46px 43px 43px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+
+                background: #f09433; 
+                background: -moz-linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
+                background: -webkit-linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
+                background: linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b4d8', endColorstr='#03045e',GradientType=1 ); 
+                background-size: 300%;
+                animation: bganimation 15s infinite;
+
+                .github-logo{
+                    color: white;
+                    font-size: 85px;
+                    
+                }
+            }
         }
-      }
+        
+    }
 }
