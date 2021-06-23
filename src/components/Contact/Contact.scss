@@ -1,60 +1,43 @@
+
+
+.gradient{
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #CC2366 25%, #BC1888 50%, #384BDD 75%, #00D0FF 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#00D0FF',GradientType=1 ); 
+    background-size: 300%;
+    animation: bganimation 15s infinite;
+}
+
 .contact{
-    background:rgb(46, 46, 46);
+    background:rgb(32, 32, 32);
     // color: rgb(86, 219, 236);
     .top{
         display: flex;
         align-content: right;
         justify-content: flex-end;
-        
+        margin-top: 80px;
+
         .contact_text{
             color: white;
             display: flex;
-            flex: 6;
+            flex: 5;
             flex-direction: column;
-            align-content: center;
-            justify-content: center;
-            margin: 100px;
-
+            margin-left: 80px;
+            
             .heading{
                 font-size: 80px;
+                margin-bottom: 30px;
             }
-            h1{
-                margin: 10px;
-                padding: 10px;
-                font-size: 38px;
-                color: white;
-            } 
             h2{
-                margin: 10px;
-                padding: 10px;
-                font-size: 30px;
+                font-size: 40px;
                 color: white;
 
                 span{
-                    font-size: 55px;
+                    font-size: 50px;
                     color: transparent;
-
-                    background: #f09433; 
-                    background: -moz-linear-gradient(45deg, #f09433 0%, #CC2366 25%, #BC1888 50%, #384BDD 75%, #00D0FF 100%); 
-                    background: -webkit-linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
-                    background: linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#00D0FF',GradientType=1 ); 
-                    background-size: 300%;
-                    animation: bganimation 15s infinite;
-
                     background-clip: text;
-    
-                    @keyframes bganimation {
-                        0%{
-                        background-position: 0% 50%;
-                        }
-                        50%{
-                        background-position: 100% 50%;
-                        }
-                        100%{
-                        background-position: 0% 50%;
-                        }
-                    }
                 }
             }
         }
@@ -63,12 +46,12 @@
         .arrow{
             flex: 3;
             width: 100%;
-            padding-right: 50px;
+            padding-right: 60px;
+            padding-top: 120px;
             height: auto;
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
-            margin-top: 15vw;
         }
 
         .logocontainer{
@@ -77,13 +60,17 @@
             align-content: center;
             justify-content: space-between;
             justify-items: center;
-            margin: 100px 60px 0 0 ;
             
 
             >*{
                 cursor: pointer;
                 margin-right: 40px;
+                margin-bottom: 40px;
                 transition: all 0.35s ease;
+                &:hover{
+                    box-shadow: 2px 4px 0px 1px rgba(255, 255, 255, 0.979);
+                }
+
                 @keyframes bganimation {
                     0%{
                     background-position: 0% 50%;
@@ -94,9 +81,6 @@
                     100%{
                     background-position: 0% 50%;
                     }
-                }
-                &:hover{
-                    box-shadow: 2px 4px 0px 1px rgba(255, 255, 255, 0.979);
                 }
             }
 
@@ -109,7 +93,6 @@
                 align-items: center;
                 justify-content: center;
                 overflow: hidden;
-                margin-bottom: 20px;
                 background: #f09433; 
                 background: -moz-linear-gradient(45deg, #f09433 0%, #CC2366 25%, #BC1888 50%, #384BDD 75%, #00D0FF 100%); 
                 background: -webkit-linear-gradient(45deg, #f09433 0%,#CC2366 25%,#BC1888 50%,#384BDD 75%,#00D0FF 100%); 
@@ -159,7 +142,6 @@
                 justify-content: center;
                 overflow: hidden;
 
-                background: #f09433; 
                 background: -moz-linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
                 background: -webkit-linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
                 background: linear-gradient(45deg, #00b4d8 0%, #0077b6 50%, #03045e 100%); 
@@ -169,11 +151,42 @@
 
                 .github-logo{
                     color: white;
-                    font-size: 85px;
-                    
+                    font-size: 85px;  
                 }
             }
         }
         
+    }
+
+    .contactform{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        margin-left: 80px;
+    
+        .messagebox{
+            width: 40vw;
+            height: 60px;
+            padding: 20px;
+        }
+
+        .submitbutton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 5px;
+            margin: 20px 0px 0px 0px;
+            font-weight: 800;
+
+            .sendicon{
+                margin-left: 5px;
+            }
+        }
+
+        input{
+            margin-bottom: 30px;
+            padding: 20px;
+        }
     }
 }
