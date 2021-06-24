@@ -12,12 +12,16 @@
 
 .contact{
     background:rgb(32, 32, 32);
-    // color: rgb(86, 219, 236);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
     .top{
+        padding-top: 60px;
+        flex: 5;
         display: flex;
         align-content: right;
         justify-content: flex-end;
-        margin-top: 80px;
 
         .contact_text{
             color: white;
@@ -85,8 +89,8 @@
             }
 
             .instalogocontainer{
-                height: 88px;
-                width: 88px;
+                height: 80px;
+                width: 80px;
                 border: solid 2px white;
                 border-radius: 27px;
                 display: flex;
@@ -103,13 +107,13 @@
 
                 .insta-logo{
                     color: white;
-                    font-size: 100px;
+                    font-size: 90px;
                 }
             }
 
             .linkdinlogocontainer{
-                height: 80px;
-                width: 80px;
+                height: 72px;
+                width: 72px;
                 border: solid 2px white;
                 border-radius: 12px;
                 display: flex;
@@ -128,13 +132,13 @@
 
                 .linkdin-logo{
                     color: white;
-                    font-size: 100px;
+                    font-size: 90px;
                 }
             }
 
             .githublogocontainer{
-                height: 90px;
-                width: 90px;
+                height: 80px;
+                width: 80px;
                 border: solid 2px white;
                 border-radius: 46px 46px 43px 43px;
                 display: flex;
@@ -151,42 +155,77 @@
 
                 .github-logo{
                     color: white;
-                    font-size: 85px;  
+                    font-size: 75px;  
                 }
             }
         }
         
     }
 
-    .contactform{
+    .bottom{
+        flex: 5;
         display: flex;
-        flex-direction: column;
-        width: 40vw;
-        margin-left: 80px;
-    
-        .messagebox{
-            width: 40vw;
-            height: 60px;
-            padding: 20px;
-        }
+        .left{
+            flex: 4;
+            .contactform{
+                display: flex;
+                flex-direction: column;
+                width: 40vw;
+                margin-left: 70px;
+                padding-left: 10px;
+                padding-top: 5px;
+                padding-right: 5px;
 
-        .submitbutton{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            padding: 5px;
-            margin: 20px 0px 0px 0px;
-            font-weight: 800;
+                >*{
+                    border-radius: 5px;
+                }
+                span{
+                    padding-top: 5px;
+                    align-self: center;
+                    color: white;
+                }
 
-            .sendicon{
-                margin-left: 5px;
+                .messagebox{
+                    resize:none ;
+                    height: 60px;
+                    padding: 20px;
+                }
+        
+                .submitbutton{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    padding: 5px;
+                    margin: 20px 0px 0px 0px;
+                    font-weight: 800;
+                    border-radius: 5px;
+                    
+        
+                    .sendicon{
+                        margin-left: 5px;
+                    }
+                }
+        
+                input{
+                    margin-bottom: 30px;
+                    padding: 20px;
+                }
             }
         }
 
-        input{
-            margin-bottom: 30px;
-            padding: 20px;
+        .right{
+            flex: 4;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            img{
+                width: 70%;
+                height: auto;
+            }
         }
     }
+    
 }

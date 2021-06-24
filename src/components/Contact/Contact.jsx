@@ -3,8 +3,18 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import SendIcon from '@material-ui/icons/Send';
+import { useState } from "react";
+
 
 export default function Contact() {
+    const [msg, setmsg] = useState(false);
+
+    function handleSubmit(e){
+        e.preventDefault();
+        console.log(e)
+        setmsg(true);
+    }
+
     return (
         <div className="contact" id="contact">
             <div className="top">
@@ -29,12 +39,18 @@ export default function Contact() {
                 </div>
             </div>
             <div className="bottom">
-                <form action="" className="contactform">
-                    <input type="text" placeholder="Name"/>
-                    <input type="email" placeholder="Email"/>
-                    <textarea type="message" placeholder="Your message" className="messagebox"/>
-                    <button type="submit" className="submitbutton gradient">Send <SendIcon className="sendicon"/></button>
-                </form>
+                <div className="left">
+                    <form onSubmit={handleSubmit} className="contactform" action="mailto:anshulraj9823@gmail.com" method="POST" enctype="multipart/form-data">
+                        <input type="text" placeholder="Name" name="Name" required/>
+                        <input type="email" placeholder="Email" name="Email" required />
+                        <textarea type="message" placeholder="Your message" name="Message" className="messagebox" required/>
+                        <button type="submit" className="submitbutton gradient">Send<SendIcon className="sendicon"/></button>
+                        {msg && <span>Thanks I'll contact ASAP! </span>}
+                    </form>
+                </div>
+                <div className="right">
+                    <img src="assets\Mar-Business_18.svg" alt="" />
+                </div>
             </div>
         </div>
     )

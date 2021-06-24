@@ -2,18 +2,27 @@
 
 
 .menu{
-  width: 200px;
+  width: 250px;
   height: 100vh;
   background-color: $secondary-color;
   position:fixed;
   top: 0px;
-  right: -200px;
+  right: -250px;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 1s ease;
+
+  .credits{
+    text-align: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    text-decoration: underline;
+    color: whitesmoke;
+  }
 
   &.active{
     right: 0;

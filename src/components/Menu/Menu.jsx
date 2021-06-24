@@ -14,6 +14,7 @@ export default function Menu({openmenu,setopenmenu}) {
                     <a href="#contact" onClick={()=>setopenmenu(!openmenu)}>contact</a>
                 </li>
             </ul>
+            <a href='https://www.freepik.com/free-vector/illustration-e-mail-protection-concept-e-mail-envelope-with-file-document-attach-file-system-security-approved_13744792.htm' className="credits">Vector Art credits</a>
         </div>
     )
 }

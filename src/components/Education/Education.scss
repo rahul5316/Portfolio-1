@@ -97,6 +97,7 @@
     .navigation{
         display: flex;
         position: absolute;
+        cursor: pointer;
         &.leftarrow{
             left: 300px;
         }
