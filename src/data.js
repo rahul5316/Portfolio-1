@@ -32,7 +32,6 @@ const all_projects = [
 ];
 
 function add_info(portlist){
-    console.log("add_info function called!!");
     var ans = [];
     portlist.forEach((element_id)=>{
         all_projects.forEach((element)=>{
@@ -41,7 +40,6 @@ function add_info(portlist){
             }
         })
     });
-    console.log(ans);
     return ans
 }
 
