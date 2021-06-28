@@ -9,12 +9,17 @@
     width: 100%;
     z-index: 2;
     transition: all 1s;
-
+    
     .wrapper{
         padding: 10px 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include mobile{
+            padding: 10px 10px;
+            margin: 10px;
+        }
 
         .left{
             font-size: 16px;
@@ -27,6 +32,11 @@
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
+                
+                @include mobile{
+                    font-size: 7vw;
+                    text-align: center;
+                }
             }
 
             .itemcontainer{
@@ -39,6 +49,10 @@
 
                 .icon{
                     margin-left: 20px;
+                }
+
+                @include mobile{
+                    display: none;
                 }
             }
         }

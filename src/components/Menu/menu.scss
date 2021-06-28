@@ -15,6 +15,10 @@
   justify-content: center;
   transition: all 1s ease;
 
+  @include mobile{
+    z-index: 1;
+  }
+
   .credits{
     text-align: center;
     display: flex;

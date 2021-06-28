@@ -40,7 +40,8 @@ export default function Contact() {
             <div className="top">
                 <div className="contact_text">
                     <h1 className="heading">Contact</h1> 
-                    <h2>Want to colab ? You can write to me below.</h2>
+                    <h2>Want to colab ?</h2>
+                    <h2>You can write to me below</h2>
                     <h2>or , just drop a <span className='gradient'>Hi!</span> here.</h2>
                 </div>
                 <div className="arrow">

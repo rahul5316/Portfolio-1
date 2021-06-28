@@ -1,3 +1,11 @@
 $primary-color : #EAE2B7;
 $secondary-color : #003049;
 $contrast:#fcbf49;
+
+$width:750px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+}
