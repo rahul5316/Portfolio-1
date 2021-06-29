@@ -16,7 +16,7 @@ export default function Intro() {
             showCursor: true, 
             strings: mystr,
             backDelay:900,})
-    },)
+    },[])
 
     return (
         <div className="animated-background">
